@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861844008019",
+    "project_id": "desafio-flutter-streaming-app",
+    "storage_bucket": "desafio-flutter-streaming-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861844008019:android:3cc8c83b0c32651d976aa6",
+        "android_client_info": {
+          "package_name": "com.example.desafio_flutter_streaming_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTYki7_rqEyt4yheFQ8_3Tfv4E6g6AIsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
