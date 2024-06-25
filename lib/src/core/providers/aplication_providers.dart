@@ -1,8 +1,9 @@
 
-// import 'package:flutter/material.dart';
-// import 'package:riverpod_annotation/riverpod_annotation.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
-// import 'package:tcc_app/src/core/functionalPrograming/either.dart';
+import 'package:desafio_flutter_streaming_app/src/core/restClient/rest_client.dart';
+import 'package:flutter/material.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:tcc_app/src/core/functionalPrograming/either.dart';
 // import 'package:tcc_app/src/core/restClient/rest_client.dart';
 // import 'package:tcc_app/src/core/ui/app_nav_global_key.dart';
 // import 'package:tcc_app/src/models/place_model.dart';
@@ -16,10 +17,10 @@
 // import 'package:tcc_app/src/services/user_login_services/user_login_service.dart';
 // import 'package:tcc_app/src/services/user_login_services/user_login_service_impl.dart';
 
-// part 'aplication_providers.g.dart';
+part 'aplication_providers.g.dart';
 
-// @Riverpod(keepAlive: true)
-// RestClient restClient(RestClientRef ref) => RestClient();
+@Riverpod(keepAlive: true)
+RestClient restClient(RestClientRef ref) => RestClient();
 
 
 // @Riverpod(keepAlive: true)

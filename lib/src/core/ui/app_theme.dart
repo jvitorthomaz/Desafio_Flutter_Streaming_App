@@ -12,18 +12,19 @@ sealed class AppTheme {
 
   static ThemeData themeData = ThemeData(
     useMaterial3: true,
+    brightness: Brightness.dark,
     
-    appBarTheme: const AppBarTheme(
-      centerTitle: true,
-      iconTheme: IconThemeData(color: AppColors.colorGreen),
-      backgroundColor: Colors.white,
-      titleTextStyle: TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: 18,
-        color: Colors.black,
-        fontFamily: AppFonts.fontPopins,
-      )
-    ),
+    // appBarTheme: const AppBarTheme(
+    //   centerTitle: true,
+    //   iconTheme: IconThemeData(color: AppColors.colorGreen),
+    //   backgroundColor: Colors.white,
+    //   titleTextStyle: TextStyle(
+    //     fontWeight: FontWeight.w500,
+    //     fontSize: 18,
+    //     color: Colors.black,
+    //     fontFamily: AppFonts.fontPopins,
+    //   )
+    // ),
 
   
 
