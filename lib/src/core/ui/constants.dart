@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
 sealed class AppColors {
-  static const colorBrown = Color(0xFFB07B01);
-  static const colorGrey = Color(0xFF999999);
-  static const colorGreyx = Color(0xFFE6E2E9);
-  static const colorGreyLight = Color(0xFFB07B01);
-  static const colorBlue = Colors.blue;
-  static const colorGreen = Colors.green;
-  static const colorGreenLight = Colors.lightGreen;
+  static const primaryColor = Color.fromRGBO(188, 76, 241, 1);
+  static const buttonColor = Color.fromRGBO(188, 76, 241, 0.2);
+  static const colorGrey = Colors.grey;
 
-  static const colorRed = Color(0xFFEB1212);
+  static const colorRed = Colors.red;
   static const colorBlack = Colors.black;
-   static const colorWhite = Colors.white;
+  static const colorWhite = Colors.white;
 
 }
 
@@ -21,6 +17,5 @@ sealed class AppFonts {
 
 sealed class AppImages {
   static const imgLogo = 'assets/images/img_logo.png';
-  //static const imgLogo = 'assets/images/imgLogo.png';
   static const avatarImage = 'assets/images/avatar.png';
 }

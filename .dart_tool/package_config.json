@@ -638,6 +638,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "validatorless",
+      "rootUri": "file:///Users/vitorthomaz/.pub-cache/hosted/pub.dev/validatorless-1.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/vitorthomaz/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -698,7 +704,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-06-25T21:37:49.320015Z",
+  "generated": "2024-06-26T01:53:36.779647Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///Users/vitorthomaz/tools/flutter",

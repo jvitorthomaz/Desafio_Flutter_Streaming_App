@@ -1,16 +1,81 @@
-# desafio_flutter_streaming_app
 
-A new Flutter project.
+<h1 align="center">Desafio - Streaming App</h1>
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+<h2>Tópicos 📋</h2>
 
-A few resources to get you started if this is your first Flutter project:
+   <p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   - [📖 Sobre](#-sobre)
+   - [📱 Preview](#-preview)
+   - [🛠️ Funcionalidades e Tecnologias](#%EF%B8%8F-funcionalidades-e-tecnologias-estudadas)
+   - [🤔 Como usar](#-como-usar)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   </p>
+
+---
+
+<h2>📖 Sobre</h2>
+
+<p>
+    Projeto desenvolvido para como etrapa do processo seletivo para vaga de Desenvolvedor Mobile
+</p>
+
+
+---  
+
+<h2>🛠️ Funcionalidades e Tecnologias </h2>
+
+
+- Consulta da API usando o package Dio
+- RiverPod como Gerenciamento de Estado
+- Fluxo de Login e Logout com a aplicação
+- Persistência de dados com o SharedPreferences
+- Providers
+
+- Telas: 
+  - Splash (tela inicial do app para transição)
+  - Login (onde possui o fluxo de login)
+  - Register (onde possui o fluxo de cadastro)
+  - Home (tela principal do app)
+
+SDK: 
+  - [dart sdk] = 3.22.2
+
+
+Principais packages utilizados:
+  - [flutter_riverpod] - 3.0.0 https://pub.dev/packages/flutter_riverpod
+  - [riverpod_annotation] - 3.0.0 (https://pub.dev/packages/riverpod_annotation)
+  - [riverpod_lints] - 3.0.0 (https://pub.dev/packages/riverpod_lint)
+  - [riverpod_generator] - 3.0.0 (https://pub.dev/packages/riverpod_generator)
+  - [dio] - 5.4.3+1 (https://pub.dev/packages/dio)
+  - [pretty_dio_logger] - 1.3.1 (https://pub.dev/packages/pretty_dio_logger)
+  - [asyncstate] - 2.1.0 (https://pub.dev/packages/asyncstate)
+  - [top_snackbar_flutter] - 3.1.0 (https://pub.dev/packages/top_snackbar_flutter)
+  - [shared_preferences] - 2.2.3 (https://pub.dev/packages/shared_preferences)
+  - [validatorless] - 1.2.3 (https://pub.dev/packages/validatorless)
+
+Integração com Firebase:
+  - Firebase authentication: Para funcinalidades de autenticação
+  - Firebase Cloud Storage: Para funcinalidade de armazenamento de imagens
+
+         
+
+<h2>🤔 Como usar</h2>
+
+  ```
+   É necessário ter o Flutter instalado. Para configurar o ambiente de desenvolvimento na sua máquina:
+   https://flutter.dev/docs/get-started/install
+
+
+   - Clone o repositório
+
+   - Na raiz do projeto:
+    - Instale as dependências:
+      $ flutter pub get
+    - Em outro terminal, no diretório raiz do projeto, execute:
+      $ flutter run
+  ```
+
+---

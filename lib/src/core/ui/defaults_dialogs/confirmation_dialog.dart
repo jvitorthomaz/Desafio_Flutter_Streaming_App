@@ -24,7 +24,7 @@ Future<dynamic>showConfirmationDialog(BuildContext context, {
               
               : const TextStyle(
                   fontSize: 18,
-                  color: AppColors.colorGreen,
+                  color: AppColors.primaryColor,
                 ),
             ),
             IconButton(onPressed:() {Navigator.pop(context);}, icon: const Icon(Icons.close,color: AppColors.colorBlack))
