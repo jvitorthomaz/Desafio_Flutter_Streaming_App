@@ -35,14 +35,14 @@ class UserAvatarWidget extends StatelessWidget{
                   color: Colors.white,
                   border:
                     Border.all(
-                      color: AppColors.colorGreen,
+                      color: AppColors.primaryColor,
                       width: 3
                     ),
                   shape: BoxShape.circle
                 ),
                 child: const Icon(
-                  AppIcons.addNewEmplyeeeIcon,
-                  color: AppColors.colorGreen,
+                  Icons.photo_camera_outlined,
+                  color: AppColors.primaryColor,
                   size: 18,
                 ),
               ),

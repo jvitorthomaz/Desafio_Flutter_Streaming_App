@@ -62,38 +62,21 @@ class _SplashPageState extends ConsumerState<SplashPage> {
           log('Erro ao Validar', error: error, stackTrace: stackTrace);
 
           MessagesHelper.showErrorSnackBar('Erro ao Validar o login', context);
-          //Navigator.of(context).pushNamedAndRemoveUntil('/auth/login', (route) => false);
           _redirectRoute('/auth/login');
         },
 
         data: (data) {
           switch (data) {
             case SplashPageState.logged:
-              //Navigator.of(context).pushNamedAndRemoveUntil('/home/admUser', (route) => false);
               _redirectRoute('/home');
 
             case _:
-              //Navigator.of(context).pushNamedAndRemoveUntil('/auth/login', (route) => false);
-              //Future.delayed(Duration(seconds: 3));
               _redirectRoute('/auth/login');
           }
         },
       );
     });
     return Scaffold(
-      //backgroundColor: Colors.white,
-      //Tirar imagem e deixar cor de fundo igual ã da tela de login
-      // body: DecoratedBox(
-      //   decoration: const BoxDecoration(
-      //     image: DecorationImage(
-      //       image: AssetImage(
-      //         AppImages.backgroundImage,
-      //       ),
-      //       opacity: 0.2,
-      //       fit: BoxFit.cover,
-      //     )
-      //   ),
-      //   child: 
         body: Center(
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 1500),
@@ -103,21 +86,6 @@ class _SplashPageState extends ConsumerState<SplashPage> {
               setState(() {
                 endAnimation = true;
               });
-              // Navigator.of(context).pushAndRemoveUntil(
-              //   PageRouteBuilder(
-              //     settings: const RouteSettings(name: '/auth/login'),
-              //     pageBuilder: (
-              //       context, 
-              //       animation, 
-              //       secondaryAnimation,
-              //     ) {
-              //       return const LoginPage();
-              //     },
-              //     transitionsBuilder: (_, animation, __, child) {
-              //       return FadeTransition(opacity: animation, child: child,);
-              //     }
-              //   ), (route) => false
-              // );
             },
             child: AnimatedContainer(
               duration: const Duration(seconds: 3),

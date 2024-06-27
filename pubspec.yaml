@@ -44,6 +44,7 @@ dependencies:
   riverpod_annotation: ^3.0.0-dev.3
   top_snackbar_flutter: ^3.1.0
   asyncstate: ^2.1.0
+  validatorless: ^1.2.3
   
 
 dev_dependencies:

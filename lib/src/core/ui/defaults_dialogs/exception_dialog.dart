@@ -14,7 +14,7 @@ showExceptionDialog(
           children: [
             const Icon(
               Icons.warning,
-              color: AppColors.colorGreen,
+              color: AppColors.primaryColor,
             ),
             const SizedBox(
               width: 8,
@@ -33,7 +33,7 @@ showExceptionDialog(
             child: const Text(
               "OK",
               style: TextStyle(
-                color: AppColors.colorGreen,
+                color: AppColors.primaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
