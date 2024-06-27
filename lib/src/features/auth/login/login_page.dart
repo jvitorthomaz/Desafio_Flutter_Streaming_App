@@ -3,8 +3,10 @@ import 'package:desafio_flutter_streaming_app/src/core/ui/constants.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/defaults_snackbar/show_snackbar.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/helpers/forms_helper.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/helpers/messages_helper.dart';
+import 'package:desafio_flutter_streaming_app/src/core/ui/widgets/divider_widget.dart';
 import 'package:desafio_flutter_streaming_app/src/features/auth/login/login_state.dart';
 import 'package:desafio_flutter_streaming_app/src/features/auth/login/login_vm.dart';
+import 'package:desafio_flutter_streaming_app/src/features/auth/widgets/social_buttons_widget.dart';
 import 'package:desafio_flutter_streaming_app/src/repositories/auth_repository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -60,11 +62,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     // });
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Form(
           key: formKey,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(30, 80, 30, 30),
-            //.all(30.0),
             child: CustomScrollView(
               slivers: [
                 SliverFillRemaining(
@@ -110,8 +112,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           TextFormField(
                             onTapOutside: (_) => context.unfocus(),
                             validator: Validatorless.multiple([
-                              Validatorless.required('O E-mail é obrigatório'),
-                              Validatorless.email('O E-mail inserido é inválido'), 
+                              Validatorless.required('Email is mandatory'),
+                              Validatorless.email('The email entered is invalid'), 
                             ]),
                             controller: emailEC,
                             decoration: const InputDecoration(
@@ -134,20 +136,20 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           TextFormField(
                             onTapOutside: (_) => context.unfocus(),
                             validator: Validatorless.multiple([
-                              Validatorless.required('A Senha é obrigatória'),
-                              Validatorless.min(6, 'A Senha deve conter pelo menos 6 caracteres'), 
+                              Validatorless.required('Password is mandatory'),
+                              Validatorless.min(6, 'Password must contain at least 6 characters'), 
                             ]),
                             obscureText: obscure, //true,
                             controller: passwordEC,
                             decoration: InputDecoration(
-                              label: Text(
+                              label: const Text(
                                 'Password', 
                                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400 ,color: AppColors.colorGrey),
                               ),
                               hintText: 'Password',
                               floatingLabelBehavior: FloatingLabelBehavior.never,
-                              labelStyle: TextStyle(color: AppColors.colorGrey),
-                              hintStyle: TextStyle(color: AppColors.colorGrey),
+                              labelStyle: const TextStyle(color: AppColors.colorGrey),
+                              hintStyle: const TextStyle(color: AppColors.colorGrey),
                               suffixIcon: IconButton(
                                 onPressed: () => setState(() => obscure = !obscure),
                                 icon: Icon(
@@ -159,7 +161,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           ),
 
                           const SizedBox(
-                            height: 5,
+                            height: 10,
                           ),
 
                           Row(
@@ -168,7 +170,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             children: [
                               InkWell(
                                 onTap: () async{
-                                  //await Navigator.of(context).pushNamed('/auth/login/forgotPassword',);
+                                  await Navigator.of(context).pushNamed('/auth/login/forgotPassword',);
                                 },
                                 child: const Text(
                                   'Forgot password?', 
@@ -179,25 +181,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           )
                         ],
                       ),  
-
-                      // const SizedBox(
-                      //    height: 15,
-                      // ),
-                  
-                  
-                      // Align(
-                      //   alignment: Alignment.centerLeft,
-                      //   child: Text(
-                      //     'Esqueceu a senha?', 
-                      //     style: TextStyle(fontSize: 14, color: AppColors.colorBlack),
-                      //   )
-                      // ),
                           
                     
                           
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          minimumSize: Size(208, 41.5),
+                          fixedSize: const Size(208, 41.5),
                         ),
                         onPressed: (){
                           // switch (formKey.currentState?.validate()) {
@@ -209,18 +198,25 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           // }
                           
                         }, 
-                        child: Text('Login'),
+                        child: const Text('Login'),
                       ),
 
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'Or Sign in With',
-                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.colorGrey),
-                          )
+                          DividerWidget(),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8),
+                            child: Text(
+                              'Or Sign in With',
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.colorGrey),
+                            ),
+                          ),
+                          DividerWidget(),
                         ],
                       ),
+
+                      const SocialButtonsWidget(),
 
                        Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -228,6 +224,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           const Text(
                             'Don\'t have an account?',
                             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: AppColors.colorGrey),
+                          ),
+                          const SizedBox(
+                            width: 5,
                           ),                              
                           InkWell(
                             onTap: () {
@@ -267,7 +266,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
         //var width = MediaQuery.of(context).size.width;
         return SizedBox(
           child: AlertDialog(
-            insetPadding: EdgeInsets.all(10),
+            insetPadding: const EdgeInsets.all(10),
             backgroundColor:Colors.white,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -292,7 +291,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                      height: 10,
                   ),
                   TextFormField(
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       color: AppColors.colorBlack,
                     ),
@@ -316,7 +315,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      minimumSize: Size.fromHeight(50),
+                      minimumSize: const Size.fromHeight(50),
                     ),
                     onPressed: (){
                         authRepository
@@ -339,7 +338,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                      
         
                     }, 
-                    child: Text(
+                    child: const Text(
                     'Redefinir Senha', style: TextStyle(
                         fontSize: 16,)
                     

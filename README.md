@@ -9,7 +9,8 @@
 
    - [📖 Sobre](#-sobre)
    - [📱 Preview](#-preview)
-   - [🛠️ Funcionalidades e Tecnologias](#%EF%B8%8F-funcionalidades-e-tecnologias-estudadas)
+   - [🛠️ Funcionalidades e Tecnologias](#-funcionalidades-e-tecnologias-estudadas)
+   - [🛠️ GitFlow](#-GitFlow)
    - [🤔 Como usar](#-como-usar)
 
    </p>
@@ -59,6 +60,21 @@ Principais packages utilizados:
 Integração com Firebase:
   - Firebase authentication: Para funcinalidades de autenticação
   - Firebase Cloud Storage: Para funcinalidade de armazenamento de imagens
+
+
+<h2>🛠️ GitFlow</h2>
+
+Branches criadas durante o desenvolvimento:
+  - main
+  - homolog
+  - development
+  - feat/splash-screen
+  - feat/login-screen
+  - feat/forgot-password-screen
+  - feat/register-user-screen
+  - feat/user-profile-screen
+  - feat/home-screen
+
 
          
 

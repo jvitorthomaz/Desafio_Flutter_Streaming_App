@@ -27,7 +27,7 @@ sealed class AppTheme {
 
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Color.fromRGBO(35, 37, 44, 1),
+      fillColor: const Color.fromRGBO(35, 37, 44, 1),
       labelStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400 ,color: AppColors.colorGrey),
       border: _defaultInputBorder,
       enabledBorder: _defaultInputBorder,
@@ -48,9 +48,8 @@ sealed class AppTheme {
         ),
         foregroundColor: AppColors.primaryColor,
         backgroundColor: AppColors.buttonColor,
-        minimumSize: Size(208, 41.5),
-        maximumSize: Size(240, 42),
-        //backgroundColor: AppColors.colorGreen,
+        minimumSize: const Size(208, 41.5),
+        maximumSize: const Size(240, 42),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         )

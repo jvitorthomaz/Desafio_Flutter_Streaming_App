@@ -18,4 +18,6 @@ sealed class AppFonts {
 sealed class AppImages {
   static const imgLogo = 'assets/images/img_logo.png';
   static const avatarImage = 'assets/images/avatar.png';
+  static const appleLogo = 'assets/images/apple_logo.png';
+  static const googleLogo = 'assets/images/google_logo.png';
 }

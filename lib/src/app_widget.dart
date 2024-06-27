@@ -2,7 +2,9 @@ import 'package:asyncstate/asyncstate.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/app_nav_global_key.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/app_theme.dart';
 import 'package:desafio_flutter_streaming_app/src/core/ui/widgets/app_loader.dart';
+import 'package:desafio_flutter_streaming_app/src/features/auth/forgotPassword/forgot_password_page.dart';
 import 'package:desafio_flutter_streaming_app/src/features/auth/login/login_page.dart';
+import 'package:desafio_flutter_streaming_app/src/features/auth/register/user_register_page.dart';
 import 'package:desafio_flutter_streaming_app/src/features/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +28,8 @@ class AppWidget extends StatelessWidget {
           routes: {
             '/':(_) => const SplashPage(),
             '/auth/login': (_) => const LoginPage(),
-            //'/auth/login/forgotPassword': (_) => const ForgotPasswordPage(),
-            // '/auth/login/register': (_) => const UserRegisterPage(),
+            '/auth/login/forgotPassword': (_) => const ForgotPasswordPage(),
+            '/auth/login/register': (_) => const UserRegisterPage(),
 
             // '/home': (_) => const HomeAdmPage(),
 
